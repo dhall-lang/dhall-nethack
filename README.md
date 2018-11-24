@@ -12,18 +12,18 @@ The following files have comments documenting some of the decisions behind how
 the project is organized and how this package models the Dhall-to-NetHack
 translation:
 
-* [./types.dhall](./types.dhall)
-    * [./types/Config.dhall](./types/Config.dhall)
-    * [./types/Attributes.dhall](./types/Attributes.dhall)
-    * [./types/Comparison.dhall](./types/Comparison.dhall)
-    * [./types/Hilite.dhall](./types/Hilite.dhall)
-    * [./types/HiliteStatus.dhall](./types/HiliteStatus.dhall)
-    * [./types/NumberPad.dhall](./types/NumberPad.dhall)
-    * [./types/PileLimit.dhall](./types/PileLimit.dhall)
-* [./defaults.dhall](./defaults.dhall)
-    * [./defaults/Config.dhall](./defaults/Config.dhall)
-* [./render/Config.dhall](./render/Config.dhall)
-* [./Prelude.dhall](./Prelude.dhall)
+* [`./types.dhall`](./types.dhall)
+    * [`./types/Config.dhall`](./types/Config.dhall)
+    * [`./types/Attributes.dhall`](./types/Attributes.dhall)
+    * [`./types/Comparison.dhall`](./types/Comparison.dhall)
+    * [`./types/Hilite.dhall`](./types/Hilite.dhall)
+    * [`./types/HiliteStatus.dhall`](./types/HiliteStatus.dhall)
+    * [`./types/NumberPad.dhall`](./types/NumberPad.dhall)
+    * [`./types/PileLimit.dhall`](./types/PileLimit.dhall)
+* [`./defaults.dhall`](./defaults.dhall)
+    * [`./defaults/Config.dhall`](./defaults/Config.dhall)
+* [`./render/Config.dhall`](./render/Config.dhall)
+* [`./Prelude.dhall`](./Prelude.dhall)
 
 Note: this repository covers the non-platform-specific NetHack options, omits
 redundant options (such as `female`, which is superseded by `gender`), and

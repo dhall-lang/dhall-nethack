@@ -1,0 +1,1 @@
+{ prompt : Bool, default : Bool }

@@ -1,0 +1,1 @@
+{ pickup : Bool, name : Text }

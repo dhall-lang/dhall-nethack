@@ -1,0 +1,1 @@
+{ keybinding : Text, command : Text }

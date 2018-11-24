@@ -26,8 +26,8 @@
 
     Note that only a few types have defaults listed here.  This is because
     most of the NetHack options are modeled as `Optional` values, where a `None`
-    means to omit that option from the generated `~/.nethackrc` file and to
-    use whatever NetHack defaults to.  For those options `None` is already a
+    means to omit that option from the generated NetHack configuration file and
+    to use whatever NetHack defaults to.  For those options `None` is already a
     suitable default value.
 
     We permit omitted options for several reasons:

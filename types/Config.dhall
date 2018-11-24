@@ -1,6 +1,6 @@
 {-  Almost all of the fields are either `Optional` values or `List`s so that
-    these fields can be omitted from the generated `~/.nethackrc` if left
-    empty.
+    these fields can be omitted from the generated NetHack configuration file if
+    left empty.
 
     The few fields that are not wrapped in `Optional` or `List` are records
     whose fields are also all `List` or `Optional` values.  For example, the

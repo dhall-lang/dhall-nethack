@@ -78,7 +78,7 @@ in    defaults.Config
       }
 ```
 
-You can convert that to a `~/.nethackrc` file by running:
+You can convert that to a NetHack configuration file by running:
 
 ```bash
 $ dhall-to-text <<< './toNetHack.dhall ./examples/small.dhall'

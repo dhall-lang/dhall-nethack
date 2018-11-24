@@ -1,5 +1,5 @@
 {-  This is the default configuration which generates an empty
-    `~/.nethackrc` file
+    NetHack configuration file:
 
     ```
     $ dhall <<< './toNetHack.dhall ./defaults/Config.dhall'

@@ -106,8 +106,10 @@ $ dhall repl
 ⊢ defaults.Config                   -- Display the default `Config` value
 ⊢ defaults.Scores                   -- Display the default `Scores` value
 
-⊢ :let render = ./render.dhall   -- Import all rendering functions
-⊢ render.Config defaults.Config  -- Render the default configuration
+⊢ :let render = ./render.dhall              -- Import all rendering functions
+⊢ render.Config defaults.Config             -- Render the default configuration
+⊢ render.Config ./examples/small.dhall      -- Render a small configuration
+⊢ render.Config ./examples/validated.dhall  -- Render a large configuration
 ⊢ render.Config (defaults.Config // { scores = defaults.Scores // { top = Some 3 } })
 ⊢ render.Scores (defaults.Scores // { top = Some 3 })
 

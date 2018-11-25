@@ -31,57 +31,59 @@ also omits underspecified options (such as `herecmd_menu`).
 
 ## Quick start
 
-You can find an example NetHack configuration specified in Dhall in
-[`./examples/small.dhall`](./examples/small.dhall):
-
 ```haskell
-let types = ../types.dhall
+-- ./example.dhall
 
-let defaults = ../defaults.dhall
+let types = ./types.dhall
 
-in    defaults.Config
-    ⫽ { name =
-          Some "Kaeru"
-      , role =
-          Some { enable = True, value = types.Role.wizard {=} }
-      , align =
-          Some { enable = True, value = types.Alignment.chaotic {=} }
-      , race =
-          Some { enable = True, value = types.Race.elf {=} }
-      , gender =
-          Some (types.Gender.female {=})
-      , pettype =
-          Some (types.PetType.cat {=})
-      , catname =
-          Some "Imoen"
-      , fruit =
-          Some "apple pie"
-      , autopickup =
-          Some False
-      , disclose =
-          let secret = Some { default = False, prompt = False }
-          
-          in  Some
-              { attributes =
-                  secret
-              , conduct =
-                  secret
-              , dungeon_overview =
-                  secret
-              , inventory =
-                  secret
-              , monsters_genocided =
-                  secret
-              , monsters_killed =
-                  secret
-              }
-      }
+let defaults = ./defaults.dhall
+
+let toNetHack = ./toNetHack.dhall
+
+let config =
+        defaults.Config
+      ⫽ { name =
+            Some "Kaeru"
+        , role =
+            Some { enable = True, value = types.Role.wizard {=} }
+        , align =
+            Some { enable = True, value = types.Alignment.chaotic {=} }
+        , race =
+            Some { enable = True, value = types.Race.elf {=} }
+        , gender =
+            Some (types.Gender.female {=})
+        , pettype =
+            Some (types.PetType.cat {=})
+        , catname =
+            Some "Imoen"
+        , fruit =
+            Some "apple pie"
+        , autopickup =
+            Some False
+        , disclose =
+            let secret = Some { default = False, prompt = False }
+            
+            in  Some
+                { attributes =
+                    secret
+                , conduct =
+                    secret
+                , dungeon_overview =
+                    secret
+                , inventory =
+                    secret
+                , monsters_genocided =
+                    secret
+                , monsters_killed =
+                    secret
+                }
+        }
+
+in  toNetHack config
 ```
 
-You can convert that to a NetHack configuration file by running:
-
 ```bash
-$ dhall-to-text <<< './toNetHack.dhall ./examples/small.dhall'
+$ dhall-to-text <<< './example.dhall'
 OPTIONS=align:chaotic
 OPTIONS=!autopickup
 OPTIONS=catname:Imoen

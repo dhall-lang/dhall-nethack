@@ -8,23 +8,6 @@ this repository :
 * as a template for organizing your own large Dhall projects
 * as a case study for adapting Dhall to large and complex configuration formats
 
-The following files have comments documenting some of the decisions behind how
-the project is organized and how this package models the Dhall-to-NetHack
-translation:
-
-* [`./types.dhall`](./types.dhall)
-    * [`./types/Config.dhall`](./types/Config.dhall)
-    * [`./types/Attributes.dhall`](./types/Attributes.dhall)
-    * [`./types/Comparison.dhall`](./types/Comparison.dhall)
-    * [`./types/Hilite.dhall`](./types/Hilite.dhall)
-    * [`./types/HiliteStatus.dhall`](./types/HiliteStatus.dhall)
-    * [`./types/NumberPad.dhall`](./types/NumberPad.dhall)
-    * [`./types/PileLimit.dhall`](./types/PileLimit.dhall)
-* [`./defaults.dhall`](./defaults.dhall)
-    * [`./defaults/Config.dhall`](./defaults/Config.dhall)
-* [`./render/Config.dhall`](./render/Config.dhall)
-* [`./Prelude.dhall`](./Prelude.dhall)
-
 Note: this repository covers the non-platform-specific NetHack options, omits
 redundant options (such as `female`, which is superseded by `gender`), and
 also omits underspecified options (such as `herecmd_menu`).
@@ -94,6 +77,44 @@ OPTIONS=name:Kaeru
 OPTIONS=pettype:cat
 OPTIONS=race:elf
 OPTIONS=role:wizard
+```
+
+## Exploring the project
+
+You can begin to explore the project by browsing these files and their
+dependencies:
+
+* [`./types.dhall`](./types.dhall)
+    * [`./types/Config.dhall`](./types/Config.dhall)
+* [`./defaults.dhall`](./defaults.dhall)
+    * [`./defaults/Config.dhall`](./defaults/Config.dhall)
+* [`./render.dhall`](./render.dhall)
+    * [`./render/Config.dhall`](./render/Config.dhall)
+* [`./Prelude.dhall`](./Prelude.dhall)
+* [`./examples/validated.dhall`](./examples/validated.dhall)
+
+You can also use `dhall repl` to explore this project.  Try these commands to
+get started:
+
+```haskell
+$ dhall repl
+⊢ :let types = ./types.dhall  -- Import all types as a giant record
+⊢ types.Config                -- Display the `Config` type
+⊢ types.Scores                -- Display the `Scores` type
+
+⊢ :let defaults = ./defaults.dhall  -- Import all defaults as a giant record
+⊢ defaults.Config                   -- Display the default `Config` value
+⊢ defaults.Scores                   -- Display the default `Scores` value
+
+⊢ :let render = ./render.dhall   -- Import all rendering functions
+⊢ render.Config defaults.Config  -- Render the default configuration
+⊢ render.Config (defaults.Config // { scores = defaults.Scores // { top = Some 3 } })
+⊢ render.Scores (defaults.Scores // { top = Some 3 })
+
+⊢ :type render.Scores  -- What is the type of the `render.Scores` function?
+⊢ render.Scores        -- What is the implementation of `render.Scores`?
+⊢ :type render.Config  -- What is the type of the `render.Config` function?
+⊢ render.Config        -- What is the implementation of `render.Config`?
 ```
 
 [dhall-lang]: https://github.com/dhall-lang/dhall-lang/

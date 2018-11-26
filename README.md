@@ -1,4 +1,4 @@
-# `dhall-to-nethack`
+# `dhall-nethack`
 
 This repository illustrates best practices for the
 [Dhall configuration language][dhall-lang] using the

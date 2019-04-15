@@ -1,6 +1,6 @@
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
 in    λ(x : types.Scores)
     → let own =
@@ -11,7 +11,7 @@ in    λ(x : types.Scores)
             (λ(b : Bool) → [ "${./Bool.dhall b}o" ])
             ([] : List Text)
       
-      let around =
+      in let around =
             Optional/fold
             Natural
             x.around
@@ -19,7 +19,7 @@ in    λ(x : types.Scores)
             (λ(n : Natural) → [ "${Natural/show n}a" ])
             ([] : List Text)
       
-      let top =
+      in let top =
             Optional/fold
             Natural
             x.top
@@ -27,7 +27,7 @@ in    λ(x : types.Scores)
             (λ(n : Natural) → [ "${Natural/show n}t" ])
             ([] : List Text)
 
-      let scores = own # around # top
+      in let scores = own # around # top
       
       in  if Prelude.`List`.null Text scores
           then ""

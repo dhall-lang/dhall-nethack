@@ -20,59 +20,59 @@
 -}
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
-let renderOptions = ./Options.dhall
+in let renderOptions = ./Options.dhall
 
-let renderOptional =
+in let renderOptional =
         λ(a : Type)
       → λ(f : a → Text)
       → λ(optional : Optional a)
       → Optional/fold a optional Text (λ(x : a) → renderOptions (f x)) ""
 
-let renderNamedOptional =
+in let renderNamedOptional =
         λ(a : Type)
       → λ(f : a → Text)
       → λ(name : Text)
       → renderOptional a (λ(x : a) → "${name}:${f x}")
 
-let renderOptionalText = renderNamedOptional Text (λ(x : Text) → x)
+in let renderOptionalText = renderNamedOptional Text (λ(x : Text) → x)
 
-let renderOptionalCharacter = renderNamedOptional Text (λ(x : Text) → "'${x}'")
+in let renderOptionalCharacter = renderNamedOptional Text (λ(x : Text) → "'${x}'")
 
-let renderOptionalBool =
+in let renderOptionalBool =
         λ(name : Text)
       → renderOptional Bool (λ(enable : Bool) → "${./Bool.dhall enable}${name}")
 
-let renderOptionalNatural = renderNamedOptional Natural Natural/show
+in let renderOptionalNatural = renderNamedOptional Natural Natural/show
 
-let renderList =
+in let renderList =
         λ(a : Type)
       → λ(f : a → Text)
       → Prelude.`Text`.concatMap a (λ(x : a) → "${f x}\n")
 
-let renderOptionalEnabled =
+in let renderOptionalEnabled =
         λ(a : Type)
       → λ(f : a → Text)
       → renderNamedOptional (types.Enabled a) (./Enabled.dhall a f)
 
-let renderOptionalTopLevel =
+in let renderOptionalTopLevel =
         λ(name : Text)
       → λ(x : Optional Text)
       → Optional/fold Text x Text (λ(file : Text) → "${name}=${file}\n") ""
 
-let renderAUTOCOMPLETES = renderList (types.Enabled Text) ./AUTOCOMPLETE.dhall
+in let renderAUTOCOMPLETES = renderList (types.Enabled Text) ./AUTOCOMPLETE.dhall
 
-let renderAlign =
+in let renderAlign =
       renderOptionalEnabled types.Alignment ./Alignment.dhall "align"
 
-let renderAutopickup =
+in let renderAutopickup =
       renderList types.AUTOPICKUP_EXCEPTION ./AUTOPICKUP_EXCEPTION.dhall
 
-let renderDisclose =
+in let renderDisclose =
       renderNamedOptional types.Disclose ./Disclose.dhall "disclose"
 
-let renderMenuColors =
+in let renderMenuColors =
         λ(x : List types.MenuColor)
       →       if Prelude.`List`.null types.MenuColor x
         
@@ -82,48 +82,48 @@ let renderMenuColors =
               OPTIONS=menucolors
               ${renderList types.MenuColor ./MenuColor.dhall x}''
 
-let renderMenuHeadings =
+in let renderMenuHeadings =
       renderNamedOptional
       types.MenuHeadings
       ./MenuHeadings.dhall
       "menu_headings"
 
-let renderMenuStyle =
+in let renderMenuStyle =
       renderNamedOptional types.MenuStyle ./MenuStyle.dhall "menustyle"
 
-let renderMsgWindow =
+in let renderMsgWindow =
       renderNamedOptional types.MsgWindow ./MsgWindow.dhall "msg_window"
 
-let renderNumberPad =
+in let renderNumberPad =
       renderNamedOptional types.NumberPad ./NumberPad.dhall "number_pad"
 
-let renderPetType = renderNamedOptional types.PetType ./PetType.dhall "pettype"
+in let renderPetType = renderNamedOptional types.PetType ./PetType.dhall "pettype"
 
-let renderPickupBurden =
+in let renderPickupBurden =
       renderNamedOptional
       types.PickupBurden
       ./PickupBurden.dhall
       "pickup_burden"
 
-let renderPileLimit =
+in let renderPileLimit =
       renderNamedOptional types.PileLimit ./PileLimit.dhall "pile_limit"
 
-let renderPlayMode =
+in let renderPlayMode =
       renderNamedOptional types.PlayMode ./PlayMode.dhall "playmode"
 
-let renderRunMode = renderNamedOptional types.RunMode ./RunMode.dhall "runmode"
+in let renderRunMode = renderNamedOptional types.RunMode ./RunMode.dhall "runmode"
 
-let renderSortLoot =
+in let renderSortLoot =
       renderNamedOptional types.SortLoot ./SortLoot.dhall "sortloot"
 
-let renderSOUND = renderList types.SOUND ./SOUND.dhall
+in let renderSOUND = renderList types.SOUND ./SOUND.dhall
 
-let renderOptionalSymSet = renderNamedOptional types.SymSet ./SymSet.dhall
+in let renderOptionalSymSet = renderNamedOptional types.SymSet ./SymSet.dhall
 
-let renderWhatisCoord =
+in let renderWhatisCoord =
       renderNamedOptional types.WhatisCoord ./WhatisCoord.dhall "whatis_coord"
 
-let renderWhatisFilter =
+in let renderWhatisFilter =
       renderNamedOptional
       types.WhatisFilter
       ./WhatisFilter.dhall

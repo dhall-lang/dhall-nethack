@@ -4,7 +4,7 @@
 
 let Color = ./Color.dhall
 
-let Attributes = ./Attributes.dhall
+in let Attributes = ./Attributes.dhall
 
 in    λ(trigger : Type)
     → { trigger :

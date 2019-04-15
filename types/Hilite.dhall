@@ -1,5 +1,5 @@
 {- This is a type-level function used within `./HiliteStatus.dhall` to reduce
-   repetition
+   repetition.
 -}
 
 let Color = ./Color.dhall

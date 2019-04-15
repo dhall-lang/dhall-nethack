@@ -1,6 +1,6 @@
-{-  Each status has a different type of trigger (i.e. `Textual`, `Numeric`,
-    etc.), which ensures that the user can't specify the wrong type of trigger
-    for each option.
+{-  Each status has a different type of trigger (e.g., `Textual`, `Numeric`),
+    which ensures that the user can't specify the wrong type of trigger for
+    each option.
 
     For example, if the user tries to specify a numeric trigger for the title
     field, like this:

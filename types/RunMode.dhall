@@ -1,1 +1,1 @@
-< teleport : {} | run : {} | walk : {} | crawl : {} >
+< teleport | run | walk | crawl >

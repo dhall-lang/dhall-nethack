@@ -6,4 +6,4 @@
     still treat as unlimited.  It's not worth forbidding that (at least, not
     within Dhall's simple type system).
 -}
-< unlimited : {} | limit : Natural >
+< unlimited | limit : Natural >

@@ -17,7 +17,7 @@
                     [ { trigger =
                           Some (types.Numeric.number (types.Comparison.EqualTo 5))
                       , color =
-                          types.Color.blue {=}
+                          types.Color.blue
                       , attributes =
                           None types.Attributes
                       }

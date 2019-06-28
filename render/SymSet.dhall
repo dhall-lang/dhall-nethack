@@ -3,22 +3,22 @@ let types = ./../types.dhall
 in    λ(x : types.SymSet)
     → merge
       { NHAccess =
-          λ(_ : {}) → "NHAccess"
+          "NHAccess"
       , MACgraphics =
-          λ(_ : {}) → "MACgraphics"
+          "MACgraphics"
       , IBMGraphics_2 =
-          λ(_ : {}) → "IBMGraphics_2"
+          "IBMGraphics_2"
       , IBMGraphics_1 =
-          λ(_ : {}) → "IBMGraphics_1"
+          "IBMGraphics_1"
       , IBMgraphics =
-          λ(_ : {}) → "IBMgraphics"
+          "IBMgraphics"
       , DECgraphics =
-          λ(_ : {}) → "DECgraphics"
+          "DECgraphics"
       , RogueWindows =
-          λ(_ : {}) → "RogueWindows"
+          "RogueWindows"
       , RogueEpyx =
-          λ(_ : {}) → "RogueEpyx"
+          "RogueEpyx"
       , RogueIBM =
-          λ(_ : {}) → "RogueIBM"
+          "RogueIBM"
       }
       x

@@ -1,1 +1,1 @@
-< cat : {} | dog : {} | none : {} >
+< cat | dog | none >

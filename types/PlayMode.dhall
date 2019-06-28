@@ -1,1 +1,1 @@
-< normal : {} | explore : {} | debug : {} >
+< normal | explore | debug >

@@ -3,10 +3,10 @@ let types = ./../types.dhall
 in    λ(x : types.PetType)
     → merge
       { cat =
-          λ(_ : {}) → "cat"
+          "cat"
       , dog =
-          λ(_ : {}) → "dog"
+          "dog"
       , none =
-          λ(_ : {}) → "none"
+          "none"
       }
       x

@@ -3,16 +3,16 @@ let types = ./../types.dhall
 in    λ(x : types.Race)
     → merge
       { human =
-          λ(_ : {}) → "human"
+          "human"
       , elf =
-          λ(_ : {}) → "elf"
+          "elf"
       , dwarf =
-          λ(_ : {}) → "dwarf"
+          "dwarf"
       , gnome =
-          λ(_ : {}) → "gnome"
+          "gnome"
       , orc =
-          λ(_ : {}) → "orc"
+          "orc"
       , random =
-          λ(_ : {}) → "random"
+          "random"
       }
       x

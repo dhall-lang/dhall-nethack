@@ -3,10 +3,10 @@ let types = ./../types.dhall
 in    λ(x : types.SortLoot)
     → merge
       { full =
-          λ(_ : {}) → "full"
+          "full"
       , loot =
-          λ(_ : {}) → "loot"
+          "loot"
       , none =
-          λ(_ : {}) → "none"
+          "none"
       }
       x

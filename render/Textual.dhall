@@ -3,13 +3,13 @@ let types = ./../types.dhall
 in    λ(x : types.Textual)
     → merge
       { always =
-          λ(_ : {}) → "always"
+          "always"
       , up =
-          λ(_ : {}) → "up"
+          "up"
       , down =
-          λ(_ : {}) → "down"
+          "down"
       , changed =
-          λ(_ : {}) → "changed"
+          "changed"
       , string =
           λ(text : Text) → text
       }

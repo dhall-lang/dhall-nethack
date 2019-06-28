@@ -1,1 +1,1 @@
-< full : {} | loot : {} | none : {} >
+< full | loot | none >

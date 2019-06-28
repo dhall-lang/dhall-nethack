@@ -3,34 +3,34 @@ let types = ./../types.dhall
 in    λ(x : types.Color)
     → merge
       { black =
-          λ(_ : {}) → "black"
+          "black"
       , red =
-          λ(_ : {}) → "red"
+          "red"
       , green =
-          λ(_ : {}) → "green"
+          "green"
       , brown =
-          λ(_ : {}) → "brown"
+          "brown"
       , blue =
-          λ(_ : {}) → "blue"
+          "blue"
       , magenta =
-          λ(_ : {}) → "magenta"
+          "magenta"
       , cyan =
-          λ(_ : {}) → "cyan"
+          "cyan"
       , gray =
-          λ(_ : {}) → "gray"
+          "gray"
       , orange =
-          λ(_ : {}) → "orange"
+          "orange"
       , lightgreen =
-          λ(_ : {}) → "lightgreen"
+          "lightgreen"
       , yellow =
-          λ(_ : {}) → "yellow"
+          "yellow"
       , lightblue =
-          λ(_ : {}) → "lightblue"
+          "lightblue"
       , lightmagenta =
-          λ(_ : {}) → "lightmagenta"
+          "lightmagenta"
       , lightcyan =
-          λ(_ : {}) → "lightcyan"
+          "lightcyan"
       , white =
-          λ(_ : {}) → "white"
+          "white"
       }
       x

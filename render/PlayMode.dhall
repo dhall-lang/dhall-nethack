@@ -3,10 +3,10 @@ let types = ./../types.dhall
 in    λ(x : types.PlayMode)
     → merge
       { normal =
-          λ(_ : {}) → "normal"
+          "normal"
       , explore =
-          λ(_ : {}) → "explore"
+          "explore"
       , debug =
-          λ(_ : {}) → "debug"
+          "debug"
       }
       x

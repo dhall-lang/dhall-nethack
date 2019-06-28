@@ -2,7 +2,7 @@
 
     ```
     { comparison :
-        < EqualTo : {} | LessThanOrEqualTo : {} | GreaterThanOrEqualTo : {} >
+        < EqualTo | LessThanOrEqualTo | GreaterThanOrEqualTo >
     , amount :
         Natural
     }
@@ -12,7 +12,7 @@
     less typing and reads more naturally.  For example, compare this:
 
     ```
-    { comparison = Operator.LessThanOrEqualTo {=}, value = 5 }
+    { comparison = Operator.LessThanOrEqualTo, value = 5 }
     ```
 
     ... to this:

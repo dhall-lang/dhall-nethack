@@ -3,30 +3,30 @@ let types = ./../types.dhall
 in    λ(x : types.Role)
     → merge
       { archaeologist =
-          λ(_ : {}) → "archaeologist"
+          "archaeologist"
       , barbarian =
-          λ(_ : {}) → "barbarian"
+          "barbarian"
       , caveman =
-          λ(_ : {}) → "caveman"
+          "caveman"
       , healer =
-          λ(_ : {}) → "healer"
+          "healer"
       , knight =
-          λ(_ : {}) → "knight"
+          "knight"
       , monk =
-          λ(_ : {}) → "monk"
+          "monk"
       , priest =
-          λ(_ : {}) → "priest"
+          "priest"
       , ranger =
-          λ(_ : {}) → "ranger"
+          "ranger"
       , rogue =
-          λ(_ : {}) → "rogue"
+          "rogue"
       , samurai =
-          λ(_ : {}) → "samurai"
+          "samurai"
       , tourist =
-          λ(_ : {}) → "tourist"
+          "tourist"
       , valkyrie =
-          λ(_ : {}) → "valkyrie"
+          "valkyrie"
       , wizard =
-          λ(_ : {}) → "wizard"
+          "wizard"
       }
       x

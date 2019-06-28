@@ -1,1 +1,1 @@
-< male : {} | female : {} | random : {} >
+< male | female | random >

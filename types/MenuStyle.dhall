@@ -1,1 +1,1 @@
-< traditional : {} | combination : {} | partial : {} | full : {} >
+< traditional | combination | partial | full >

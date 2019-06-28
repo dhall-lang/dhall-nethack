@@ -1,13 +1,9 @@
 let Comparison = ./Comparison.dhall
 
-in  < always :
-        {}
-    | up :
-        {}
-    | down :
-        {}
-    | changed :
-        {}
+in  < always
+    | up
+    | down
+    | changed
     | percentage :
         Comparison
     | number :

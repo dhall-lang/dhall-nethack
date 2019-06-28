@@ -3,14 +3,14 @@ let types = ./../types.dhall
 in    λ(x : types.WhatisCoord)
     → merge
       { compass =
-          λ(_ : {}) → "c"
+          "c"
       , full =
-          λ(_ : {}) → "f"
+          "f"
       , map =
-          λ(_ : {}) → "m"
+          "m"
       , screen =
-          λ(_ : {}) → "s"
+          "s"
       , none =
-          λ(_ : {}) → "n"
+          "n"
       }
       x

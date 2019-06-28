@@ -3,12 +3,12 @@ let types = ./../types.dhall
 in    λ(x : types.MsgWindow)
     → merge
       { single =
-          λ(_ : {}) → "single"
+          "single"
       , combination =
-          λ(_ : {}) → "combination"
+          "combination"
       , full =
-          λ(_ : {}) → "full"
+          "full"
       , reversed =
-          λ(_ : {}) → "reversed"
+          "reversed"
       }
       x

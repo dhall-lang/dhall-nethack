@@ -1,1 +1,1 @@
-< no_filtering : {} | view_only : {} | same_area : {} >
+< no_filtering | view_only | same_area >

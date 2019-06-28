@@ -1,1 +1,1 @@
-< single : {} | combination : {} | full : {} | reversed : {} >
+< single | combination | full | reversed >

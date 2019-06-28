@@ -3,16 +3,16 @@ let types = ./../types.dhall
 in    λ(x : types.PickupBurden)
     → merge
       { unencumbered =
-          λ(_ : {}) → "U"
+          "U"
       , burdened =
-          λ(_ : {}) → "B"
+          "B"
       , stressed =
-          λ(_ : {}) → "S"
+          "S"
       , strained =
-          λ(_ : {}) → "N"
+          "N"
       , overtaxed =
-          λ(_ : {}) → "O"
+          "O"
       , overloaded =
-          λ(_ : {}) → "L"
+          "L"
       }
       x

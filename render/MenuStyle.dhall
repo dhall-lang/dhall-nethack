@@ -3,12 +3,12 @@ let types = ./../types.dhall
 in    λ(x : types.MenuStyle)
     → merge
       { traditional =
-          λ(_ : {}) → "traditional"
+          "traditional"
       , combination =
-          λ(_ : {}) → "combination"
+          "combination"
       , partial =
-          λ(_ : {}) → "partial"
+          "partial"
       , full =
-          λ(_ : {}) → "full"
+          "full"
       }
       x

@@ -28,15 +28,15 @@ let config =
       ⫽ { name =
             Some "Kaeru"
         , role =
-            Some { enable = True, value = types.Role.wizard {=} }
+            Some { enable = True, value = types.Role.wizard }
         , align =
-            Some { enable = True, value = types.Alignment.chaotic {=} }
+            Some { enable = True, value = types.Alignment.chaotic }
         , race =
-            Some { enable = True, value = types.Race.elf {=} }
+            Some { enable = True, value = types.Race.elf }
         , gender =
-            Some (types.Gender.female {=})
+            Some types.Gender.female
         , pettype =
-            Some (types.PetType.cat {=})
+            Some types.PetType.cat
         , catname =
             Some "Imoen"
         , fruit =

@@ -3,40 +3,40 @@ let types = ./../types.dhall
 in    λ(x : types.Condition)
     → merge
       { always =
-          λ(_ : {}) → "always"
+          "always"
       , stone =
-          λ(_ : {}) → "stone"
+          "stone"
       , slime =
-          λ(_ : {}) → "slime"
+          "slime"
       , strngl =
-          λ(_ : {}) → "strngl"
+          "strngl"
       , foodpois =
-          λ(_ : {}) → "foodpois"
+          "foodpois"
       , termill =
-          λ(_ : {}) → "termill"
+          "termill"
       , blind =
-          λ(_ : {}) → "blind"
+          "blind"
       , deaf =
-          λ(_ : {}) → "deaf"
+          "deaf"
       , stun =
-          λ(_ : {}) → "stun"
+          "stun"
       , conf =
-          λ(_ : {}) → "conf"
+          "conf"
       , hallu =
-          λ(_ : {}) → "hallu"
+          "hallu"
       , lev =
-          λ(_ : {}) → "lev"
+          "lev"
       , fly =
-          λ(_ : {}) → "fly"
+          "fly"
       , ride =
-          λ(_ : {}) → "ride"
+          "ride"
       , major_troubles =
-          λ(_ : {}) → "major_troubles"
+          "major_troubles"
       , minor_troubles =
-          λ(_ : {}) → "minor_troubles"
+          "minor_troubles"
       , movement =
-          λ(_ : {}) → "movement"
+          "movement"
       , all =
-          λ(_ : {}) → "all"
+          "all"
       }
       x

@@ -2,13 +2,9 @@ let types = ./../types.dhall
 
 in    λ(x : types.Alignment)
     → merge
-      { lawful =
-          λ(_ : {}) → "lawful"
-      , neutral =
-          λ(_ : {}) → "neutral"
-      , chaotic =
-          λ(_ : {}) → "chaotic"
-      , random =
-          λ(_ : {}) → "random"
+      { lawful = "lawful"
+      , neutral = "neutral"
+      , chaotic = "chaotic"
+      , random = "random"
       }
       x

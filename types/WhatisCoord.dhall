@@ -1,1 +1,1 @@
-< compass : {} | full : {} | map : {} | screen : {} | none : {} >
+< compass | full | map | screen | none >

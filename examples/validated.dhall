@@ -15,7 +15,7 @@ in    defaults.Config
       , acoustics =
           Some True
       , align =
-          Some { enable = True, value = types.Alignment.chaotic {=} }
+          Some { enable = True, value = types.Alignment.chaotic }
       , autodescribe =
           Some False
       , autodig =
@@ -71,7 +71,7 @@ in    defaults.Config
       , fruit =
           Some "slime mold"
       , gender =
-          Some (types.Gender.female {=})
+          Some types.Gender.female
       , goldX =
           Some False
       , help =
@@ -84,9 +84,9 @@ in    defaults.Config
             defaults.HiliteStatus
           ⫽ { gold =
                 [ { color =
-                      types.Color.yellow {=}
+                      types.Color.yellow
                   , trigger =
-                      Some (types.Numeric.always {=})
+                      Some types.Numeric.always
                   , attributes =
                       None types.Attributes
                   }
@@ -114,13 +114,13 @@ in    defaults.Config
           [ { regex =
                 "blessed"
             , color =
-                Some (types.Color.cyan {=})
+                Some types.Color.cyan
             , attributes =
                 defaults.Attributes ⫽ { bold = Some True }
             }
           ]
       , menustyle =
-          Some (types.MenuStyle.traditional {=})
+          Some types.MenuStyle.traditional
       , menu_deselect_all =
           Some "-"
       , menu_deselect_page =
@@ -128,7 +128,7 @@ in    defaults.Config
       , menu_first_page =
           Some "^"
       , menu_headings =
-          Some (types.MenuHeadings.bold {=})
+          Some types.MenuHeadings.bold
       , menu_invert_all =
           Some "@"
       , menu_invert_page =
@@ -148,7 +148,7 @@ in    defaults.Config
       , menu_tab_sep =
           Some False
       , msg_window =
-          Some (types.MsgWindow.single {=})
+          Some types.MsgWindow.single
       , MSGTYPE =
           [ types.MsgType.hide "You swap places with .*" ]
       , name =
@@ -160,15 +160,15 @@ in    defaults.Config
       , null =
           Some False
       , number_pad =
-          Some (types.NumberPad.Letters {=})
+          Some types.NumberPad.Letters
       , packorder =
           Some "\")[%?+!=/(*`0_"
       , paranoid_confirmation =
           defaults.ParanoidConfirmation ⫽ { pray = Some True }
       , pettype =
-          Some (types.PetType.cat {=})
+          Some types.PetType.cat
       , pickup_burden =
-          Some (types.PickupBurden.stressed {=})
+          Some types.PickupBurden.stressed
       , pickup_thrown =
           Some True
       , pickup_types =
@@ -176,19 +176,19 @@ in    defaults.Config
       , pile_limit =
           Some (types.PileLimit.limit 5)
       , playmode =
-          Some (types.PlayMode.normal {=})
+          Some types.PlayMode.normal
       , pushweapon =
           Some False
       , race =
-          Some { enable = True, value = types.Race.elf {=} }
+          Some { enable = True, value = types.Race.elf }
       , rest_on_space =
           Some False
       , role =
-          Some { enable = True, value = types.Role.wizard {=} }
+          Some { enable = True, value = types.Role.wizard }
       , roguesymset =
-          Some (types.SymSet.RogueEpyx {=})
+          Some types.SymSet.RogueEpyx
       , runmode =
-          Some (types.RunMode.walk {=})
+          Some types.RunMode.walk
       , safe_pet =
           Some True
       , sanity_check =
@@ -204,7 +204,7 @@ in    defaults.Config
       , silent =
           Some True
       , sortloot =
-          Some (types.SortLoot.none {=})
+          Some types.SortLoot.none
       , sortpack =
           Some True
       , sparkle =
@@ -218,7 +218,7 @@ in    defaults.Config
       , suppress_alert =
           Some "3.3.1"
       , symset =
-          Some (types.SymSet.DECgraphics {=})
+          Some types.SymSet.DECgraphics
       , time =
           Some False
       , timed_delay =
@@ -232,9 +232,9 @@ in    defaults.Config
       , verbose =
           Some True
       , whatis_coord =
-          Some (types.WhatisCoord.none {=})
+          Some types.WhatisCoord.none
       , whatis_filter =
-          Some (types.WhatisFilter.no_filtering {=})
+          Some types.WhatisFilter.no_filtering
       , whatis_menu =
           Some False
       , whatis_moveskip =

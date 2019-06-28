@@ -1,1 +1,1 @@
-< human : {} | elf : {} | dwarf : {} | gnome : {} | orc : {} | random : {} >
+< human | elf | dwarf | gnome | orc | random >

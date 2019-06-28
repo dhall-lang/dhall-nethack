@@ -1,1 +1,1 @@
-< lawful : {} | neutral : {} | chaotic : {} | random : {} >
+< lawful | neutral | chaotic | random >

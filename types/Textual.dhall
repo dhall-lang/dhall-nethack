@@ -1,1 +1,1 @@
-< always : {} | up : {} | down : {} | changed : {} | string : Text >
+< always | up | down | changed | string : Text >

@@ -1,1 +1,1 @@
-< bold : {} | inverse : {} | underline : {} >
+< bold | inverse | underline >

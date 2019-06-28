@@ -3,12 +3,12 @@ let types = ./../types.dhall
 in    λ(x : types.RunMode)
     → merge
       { teleport =
-          λ(_ : {}) → "teleport"
+          "teleport"
       , run =
-          λ(_ : {}) → "run"
+          "run"
       , walk =
-          λ(_ : {}) → "walk"
+          "walk"
       , crawl =
-          λ(_ : {}) → "crawl"
+          "crawl"
       }
       x

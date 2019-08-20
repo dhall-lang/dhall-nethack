@@ -66,7 +66,7 @@ in  toNetHack config
 ```
 
 ```bash
-$ dhall-to-text <<< './example.dhall'
+$ dhall text --file './example.dhall'
 OPTIONS=align:chaotic
 OPTIONS=!autopickup
 OPTIONS=catname:Imoen

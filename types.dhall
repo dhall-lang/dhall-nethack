@@ -6,7 +6,7 @@
     ```
     let types = ./types.dhall
 
-    let defaults = ./defaults.dhall
+    in let defaults = ./defaults.dhall
 
     in    defaults.Config
         ⫽ { role = Some { enable = True, value = types.Role.wizard } }

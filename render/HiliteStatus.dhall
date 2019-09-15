@@ -1,6 +1,6 @@
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
 in    λ(x : types.HiliteStatus)
     → let renderHilites =
@@ -14,13 +14,13 @@ in    λ(x : types.HiliteStatus)
                   "hilite_status:${field}${./Hilite.dhall a renderTrigger h}"
               )
       
-      let renderTextualHilites = renderHilites types.Textual ./Textual.dhall
+      in let renderTextualHilites = renderHilites types.Textual ./Textual.dhall
       
-      let renderNumericHilites = renderHilites types.Numeric ./Numeric.dhall
+      in let renderNumericHilites = renderHilites types.Numeric ./Numeric.dhall
       
-      let renderPercentHilites = renderHilites types.Percent ./Percent.dhall
+      in let renderPercentHilites = renderHilites types.Percent ./Percent.dhall
       
-      let renderConditionHilites =
+      in let renderConditionHilites =
             renderHilites types.Condition ./Condition.dhall
       
       in      renderTextualHilites "title" x.title

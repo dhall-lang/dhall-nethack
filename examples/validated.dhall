@@ -5,7 +5,7 @@
 
 let types = ./../types.dhall
 
-let defaults = ./../defaults.dhall
+in let defaults = ./../defaults.dhall
 
 in    defaults.Config
     ⫽ { AUTOCOMPLETE =

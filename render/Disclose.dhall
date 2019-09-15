@@ -1,10 +1,10 @@
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
-let renderDisclosure = ./Disclosure.dhall
+in let renderDisclosure = ./Disclosure.dhall
 
-let renderOptionalDisclosure =
+in let renderOptionalDisclosure =
         λ(suffix : Text)
       → λ(x : Optional types.Disclosure)
       → Optional/fold

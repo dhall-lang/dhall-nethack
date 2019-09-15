@@ -1,2 +1,2 @@
--- This is file just a convenient import synonym
+-- This file is just a convenient import synonym
 ./render/Config.dhall

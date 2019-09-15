@@ -10,7 +10,7 @@
     { own : Optional Bool, around : Optional Natural, top : Optional Natural }
     ```
 
-    If all of those fields are `None` then the `scores` option will omitted
+    If all of those fields are `None` then the `scores` option will be omitted
     from the generated NetHack configuration file, so there is no need to wrap
     the `Scores` type in yet another `Optional`.
 -}

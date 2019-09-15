@@ -1,8 +1,8 @@
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
-let renderConfirmation =
+in let renderConfirmation =
         λ(name : Text)
       → λ(o : Optional Bool)
       → Optional/fold

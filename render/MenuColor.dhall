@@ -3,7 +3,7 @@ let types = ./../types.dhall
 in    λ(x : types.MenuColor)
     → let attributes = ./Attributes.dhall x.attributes
       
-      let suffix =
+      in let suffix =
             Optional/fold
             types.Color
             x.color

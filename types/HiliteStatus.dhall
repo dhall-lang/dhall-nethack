@@ -1,6 +1,6 @@
-{-  Each status has a different type of trigger (i.e. `Textual`, `Numeric`,
-    etc.), which ensures that the user can't specify the wrong type of trigger
-    for each option.
+{-  Each status has a different type of trigger (e.g., `Textual`, `Numeric`),
+    which ensures that the user can't specify the wrong type of trigger for
+    each option.
 
     For example, if the user tries to specify a numeric trigger for the title
     field, like this:
@@ -8,7 +8,7 @@
     ```
     let types = ./types.dhall
 
-    let defaults = ./defaults.dhall
+    in let defaults = ./defaults.dhall
 
     in    defaults.Config
         ⫽ { hilite_status =
@@ -48,13 +48,13 @@
 
 let Hilite = ./Hilite.dhall
 
-let Textual = ./Textual.dhall
+in let Textual = ./Textual.dhall
 
-let Numeric = ./Numeric.dhall
+in let Numeric = ./Numeric.dhall
 
-let Percent = ./Percent.dhall
+in let Percent = ./Percent.dhall
 
-let Condition = ./Condition.dhall
+in let Condition = ./Condition.dhall
 
 in  { title :
         List (Hilite Textual)

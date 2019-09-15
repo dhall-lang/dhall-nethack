@@ -1,8 +1,8 @@
 let Prelude = ./../Prelude.dhall
 
-let types = ./../types.dhall
+in let types = ./../types.dhall
 
-let renderAttribute =
+in let renderAttribute =
         λ(name : Text)
       → λ(x : Optional Bool)
       → Optional/fold

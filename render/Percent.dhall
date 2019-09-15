@@ -1,6 +1,6 @@
 let types = ./../types.dhall
 
-let renderComparison = ./Comparison.dhall
+in let renderComparison = ./Comparison.dhall
 
 in    λ(x : types.Percent)
     → merge

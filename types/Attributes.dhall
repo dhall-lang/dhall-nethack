@@ -3,9 +3,18 @@
     each attribute can be specified at most one time.
 -}
 
-{ bold : Optional Bool
-, inverse : Optional Bool
-, underline : Optional Bool
-, blink : Optional Bool
-, dim : Optional Bool
+{ Type =
+    { bold : Optional Bool
+    , inverse : Optional Bool
+    , underline : Optional Bool
+    , blink : Optional Bool
+    , dim : Optional Bool
+    }
+, default =
+    { bold = None Bool
+    , inverse = None Bool
+    , underline = None Bool
+    , blink = None Bool
+    , dim = None Bool
+    }
 }

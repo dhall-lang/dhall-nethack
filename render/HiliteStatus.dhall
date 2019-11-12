@@ -2,7 +2,7 @@ let Prelude = ./../Prelude.dhall
 
 let types = ./../types.dhall
 
-in    λ(x : types.HiliteStatus)
+in    λ(x : types.HiliteStatus.Type)
     → let renderHilites =
               λ(a : Type)
             → λ(renderTrigger : a → Text)

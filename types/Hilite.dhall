@@ -9,5 +9,5 @@ let Attributes = ./Attributes.dhall
 in    λ(trigger : Type)
     → { trigger : Optional trigger
       , color : Color
-      , attributes : Optional Attributes
+      , attributes : Optional Attributes.Type
       }

@@ -70,7 +70,7 @@ let renderAutopickup =
       renderList types.AUTOPICKUP_EXCEPTION ./AUTOPICKUP_EXCEPTION.dhall
 
 let renderDisclose =
-      renderNamedOptional types.Disclose ./Disclose.dhall "disclose"
+      renderNamedOptional types.Disclose.Type ./Disclose.dhall "disclose"
 
 let renderMenuColors =
         λ(x : List types.MenuColor)
@@ -129,7 +129,7 @@ let renderWhatisFilter =
         ./WhatisFilter.dhall
         "whatis_filter"
 
-in    λ(config : types.Config)
+in    λ(config : types.Config.Type)
     →     renderAUTOCOMPLETES config.AUTOCOMPLETE
       ++  renderOptionalBool "acoustics" config.acoustics
       ++  renderAlign config.align

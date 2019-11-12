@@ -19,30 +19,19 @@ also omits underspecified options (such as `herecmd_menu`).
 
 let types = ./types.dhall
 
-let defaults = ./defaults.dhall
-
 let toNetHack = ./toNetHack.dhall
 
 let config =
-        defaults.Config
-      ⫽ { name =
-            Some "Kaeru"
-        , role =
-            Some { enable = True, value = types.Role.wizard }
-        , align =
-            Some { enable = True, value = types.Alignment.chaotic }
-        , race =
-            Some { enable = True, value = types.Race.elf }
-        , gender =
-            Some types.Gender.female
-        , pettype =
-            Some types.PetType.cat
-        , catname =
-            Some "Imoen"
-        , fruit =
-            Some "apple pie"
-        , autopickup =
-            Some False
+        types.Config::{
+        , name = Some "Kaeru"
+        , role = Some { enable = True, value = types.Role.wizard }
+        , align = Some { enable = True, value = types.Alignment.chaotic }
+        , race = Some { enable = True, value = types.Race.elf }
+        , gender = Some types.Gender.female
+        , pettype = Some types.PetType.cat
+        , catname = Some "Imoen"
+        , fruit = Some "apple pie"
+        , autopickup = Some False
         , disclose =
             let secret = Some { default = False, prompt = False }
             
@@ -86,8 +75,6 @@ dependencies:
 
 * [`./types.dhall`](./types.dhall)
     * [`./types/Config.dhall`](./types/Config.dhall)
-* [`./defaults.dhall`](./defaults.dhall)
-    * [`./defaults/Config.dhall`](./defaults/Config.dhall)
 * [`./render.dhall`](./render.dhall)
     * [`./render/Config.dhall`](./render/Config.dhall)
 * [`./Prelude.dhall`](./Prelude.dhall)
@@ -102,16 +89,12 @@ $ dhall repl
 ⊢ types.Config                -- Display the `Config` type
 ⊢ types.Scores                -- Display the `Scores` type
 
-⊢ :let defaults = ./defaults.dhall  -- Import all defaults as a giant record
-⊢ defaults.Config                   -- Display the default `Config` value
-⊢ defaults.Scores                   -- Display the default `Scores` value
-
 ⊢ :let render = ./render.dhall              -- Import all rendering functions
-⊢ render.Config defaults.Config             -- Render the default configuration
+⊢ render.Config types.Config.default        -- Render the default configuration
 ⊢ render.Config ./examples/small.dhall      -- Render a small configuration
 ⊢ render.Config ./examples/validated.dhall  -- Render a large configuration
-⊢ render.Config (defaults.Config // { scores = defaults.Scores // { top = Some 3 } })
-⊢ render.Scores (defaults.Scores // { top = Some 3 })
+⊢ render.Config (types.Config::{ scores = types.Scores::{ top = Some 3 } })
+⊢ render.Scores (types.Scores::{ top = Some 3 })
 
 ⊢ :type render.Scores  -- What is the type of the `render.Scores` function?
 ⊢ render.Scores        -- What is the implementation of `render.Scores`?

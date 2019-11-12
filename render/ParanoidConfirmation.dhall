@@ -12,7 +12,7 @@ let renderConfirmation =
           (λ(b : Bool) → if b then [ name ] else [] : List Text)
           ([] : List Text)
 
-in    λ(x : types.ParanoidConfirmation)
+in    λ(x : types.ParanoidConfirmation.Type)
     → let confirmations =
               renderConfirmation "Confirm" x.Confirm
             # renderConfirmation "quit" x.quit

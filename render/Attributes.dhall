@@ -12,7 +12,7 @@ let renderAttribute =
           (λ(enabled : Bool) → if enabled then [ name ] else [] : List Text)
           ([] : List Text)
 
-in    λ(x : types.Attributes)
+in    λ(x : types.Attributes.Type)
     → Prelude.Text.concatSep
         "&"
         (   renderAttribute "bold" x.bold

@@ -2,7 +2,7 @@ let Prelude = ./../Prelude.dhall
 
 let types = ./../types.dhall
 
-in    λ(x : types.Scores)
+in    λ(x : types.Scores.Type)
     → let own =
             Optional/fold
               Bool

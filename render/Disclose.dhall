@@ -14,7 +14,7 @@ let renderOptionalDisclosure =
           (λ(d : types.Disclosure) → [ "${renderDisclosure d}${suffix}" ])
           ([] : List Text)
 
-in    λ(x : types.Disclose)
+in    λ(x : types.Disclose.Type)
     → Prelude.Text.concatSep
         " "
         (   renderOptionalDisclosure "i" x.inventory

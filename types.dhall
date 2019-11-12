@@ -6,10 +6,7 @@
     ```
     let types = ./types.dhall
 
-    let defaults = ./defaults.dhall
-
-    in    defaults.Config
-        ⫽ { role = Some { enable = True, value = types.Role.wizard } }
+    in  types.Config::{ role = Some { enable = True, value = types.Role.wizard } }
     ```
 
     This import is also used internally within the package as a convenient

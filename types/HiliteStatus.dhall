@@ -8,42 +8,37 @@
     ```
     let types = ./types.dhall
 
-    let defaults = ./defaults.dhall
-
-    in    defaults.Config
-        ⫽ { hilite_status =
-                defaults.HiliteStatus
-              ⫽ { title =
-                    [ { trigger =
-                          Some (types.Numeric.number (types.Comparison.EqualTo 5))
-                      , color =
-                          types.Color.blue
-                      , attributes =
-                          None types.Attributes
-                      }
-                    ]
-                }
-          }
+    in  types.Config::{
+        , hilite_status =
+            types.HiliteStatus::{
+            , title =
+                [ { trigger =
+                      Some (types.Numeric.number (types.Comparison.EqualTo 5))
+                  , color =
+                      types.Color.blue
+                  , attributes =
+                      None types.Attributes.Type
+                  }
+                ]
+            }
+        }
     ```
 
     ... then they will get a type error like this:
 
     ```
-    Error: Wrong type of function argument
+    Error: Expression doesn't match annotation
 
-    { hilite_status : { title : …
-                                { trigger : …
-                                            < - string : …
-                                            | + number : …
-                                            | …
-                                            >
-                                , …
-                                }
-                      , …
-                      }
+    { title : …
+              { trigger : …
+                          < - string : …
+                          | + number : …
+                          | …
+                          >
+              , …
+              }
     , …
     }
-    ```
 -}
 
 let Hilite = ./Hilite.dhall
@@ -56,28 +51,56 @@ let Percent = ./Percent.dhall
 
 let Condition = ./Condition.dhall
 
-in  { title : List (Hilite Textual)
-    , strength : List (Hilite Numeric)
-    , dexterity : List (Hilite Numeric)
-    , constitution : List (Hilite Numeric)
-    , intelligence : List (Hilite Numeric)
-    , wisdom : List (Hilite Numeric)
-    , charisma : List (Hilite Numeric)
-    , characteristics : List (Hilite Numeric)
-    , alignment : List (Hilite Textual)
-    , score : List (Hilite Numeric)
-    , carrying-capacity : List (Hilite Textual)
-    , gold : List (Hilite Numeric)
-    , power : List (Hilite Percent)
-    , power-max : List (Hilite Numeric)
-    , experience-level : List (Hilite Numeric)
-    , armor-class : List (Hilite Numeric)
-    , HD : List (Hilite Numeric)
-    , time : List (Hilite Numeric)
-    , hunger : List (Hilite Textual)
-    , hitpoints : List (Hilite Percent)
-    , hitpoints-max : List (Hilite Numeric)
-    , dungeon-level : List (Hilite Numeric)
-    , experience : List (Hilite Numeric)
-    , condition : List (Hilite Condition)
+in  { Type =
+        { title : List (Hilite Textual)
+        , strength : List (Hilite Numeric)
+        , dexterity : List (Hilite Numeric)
+        , constitution : List (Hilite Numeric)
+        , intelligence : List (Hilite Numeric)
+        , wisdom : List (Hilite Numeric)
+        , charisma : List (Hilite Numeric)
+        , characteristics : List (Hilite Numeric)
+        , alignment : List (Hilite Textual)
+        , score : List (Hilite Numeric)
+        , carrying-capacity : List (Hilite Textual)
+        , gold : List (Hilite Numeric)
+        , power : List (Hilite Percent)
+        , power-max : List (Hilite Numeric)
+        , experience-level : List (Hilite Numeric)
+        , armor-class : List (Hilite Numeric)
+        , HD : List (Hilite Numeric)
+        , time : List (Hilite Numeric)
+        , hunger : List (Hilite Textual)
+        , hitpoints : List (Hilite Percent)
+        , hitpoints-max : List (Hilite Numeric)
+        , dungeon-level : List (Hilite Numeric)
+        , experience : List (Hilite Numeric)
+        , condition : List (Hilite Condition)
+        }
+    , default =
+        { title = [] : List (Hilite Textual)
+        , strength = [] : List (Hilite Numeric)
+        , dexterity = [] : List (Hilite Numeric)
+        , constitution = [] : List (Hilite Numeric)
+        , intelligence = [] : List (Hilite Numeric)
+        , wisdom = [] : List (Hilite Numeric)
+        , charisma = [] : List (Hilite Numeric)
+        , characteristics = [] : List (Hilite Numeric)
+        , alignment = [] : List (Hilite Textual)
+        , score = [] : List (Hilite Numeric)
+        , carrying-capacity = [] : List (Hilite Textual)
+        , gold = [] : List (Hilite Numeric)
+        , power = [] : List (Hilite Percent)
+        , power-max = [] : List (Hilite Numeric)
+        , experience-level = [] : List (Hilite Numeric)
+        , armor-class = [] : List (Hilite Numeric)
+        , HD = [] : List (Hilite Numeric)
+        , time = [] : List (Hilite Numeric)
+        , hunger = [] : List (Hilite Textual)
+        , hitpoints = [] : List (Hilite Percent)
+        , hitpoints-max = [] : List (Hilite Numeric)
+        , dungeon-level = [] : List (Hilite Numeric)
+        , experience = [] : List (Hilite Numeric)
+        , condition = [] : List (Hilite Condition)
+        }
     }

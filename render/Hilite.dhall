@@ -13,10 +13,10 @@ in    λ(a : Type)
       
       let attributes =
             Optional/fold
-              types.Attributes
+              types.Attributes.Type
               hilite.attributes
               Text
-              (λ(a : types.Attributes) → "&${./Attributes.dhall a}")
+              (λ(a : types.Attributes.Type) → "&${./Attributes.dhall a}")
               ""
       
       let color = "/${./Color.dhall hilite.color}"

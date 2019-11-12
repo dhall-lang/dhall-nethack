@@ -1,4 +1,5 @@
-{ regex : Text
-, color : Optional ./Color.dhall
-, attributes : ./Attributes.dhall
-}
+let Color = ./Color.dhall
+
+let Attributes = ./Attributes.dhall
+
+in  { regex : Text, color : Optional Color, attributes : Attributes.Type }

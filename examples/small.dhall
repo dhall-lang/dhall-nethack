@@ -1,4 +1,4 @@
-let types = ./../types.dhall
+let types = ../types.dhall
 
 in  types.Config::{
     , name = Some "Kaeru"

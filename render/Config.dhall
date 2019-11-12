@@ -18,9 +18,9 @@
     expressions.  Abstraction is cheap in Dhall because all indirection can be
     eliminated via normalization.
 -}
-let Prelude = ./../Prelude.dhall
+let Prelude = ../Prelude.dhall
 
-let types = ./../types.dhall
+let types = ../types.dhall
 
 let renderOptions = ./Options.dhall
 
@@ -59,7 +59,16 @@ let renderOptionalEnabled =
 let renderOptionalTopLevel =
         λ(name : Text)
       → λ(x : Optional Text)
-      → Optional/fold Text x Text (λ(file : Text) → "${name}=${file}\n") ""
+      → Optional/fold
+          Text
+          x
+          Text
+          (   λ(file : Text)
+            → ''
+              ${name}=${file}
+              ''
+          )
+          ""
 
 let renderAUTOCOMPLETES = renderList (types.Enabled Text) ./AUTOCOMPLETE.dhall
 

@@ -1,4 +1,4 @@
-let types = ./../types.dhall
+let types = ../types.dhall
 
 in    λ(a : Type)
     → λ(renderTrigger : a → Text)

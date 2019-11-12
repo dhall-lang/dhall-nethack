@@ -1,1 +1,4 @@
-λ(options : Text) → "OPTIONS=${options}\n"
+  λ(options : Text)
+→ ''
+  OPTIONS=${options}
+  ''

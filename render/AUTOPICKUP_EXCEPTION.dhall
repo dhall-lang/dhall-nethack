@@ -1,4 +1,4 @@
-let types = ./../types.dhall
+let types = ../types.dhall
 
 in    λ(x : types.AUTOPICKUP_EXCEPTION)
     → let prefix = if x.pickup then "<" else ">"

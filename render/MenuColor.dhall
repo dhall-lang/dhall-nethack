@@ -1,4 +1,4 @@
-let types = ./../types.dhall
+let types = ../types.dhall
 
 in    λ(x : types.MenuColor)
     → let attributes = ./Attributes.dhall x.attributes

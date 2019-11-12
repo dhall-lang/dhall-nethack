@@ -1,6 +1,6 @@
-let Prelude = ./../Prelude.dhall
+let Prelude = ../Prelude.dhall
 
-let types = ./../types.dhall
+let types = ../types.dhall
 
 let renderDisclosure = ./Disclosure.dhall
 

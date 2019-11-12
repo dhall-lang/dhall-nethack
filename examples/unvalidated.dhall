@@ -3,12 +3,9 @@
 -- against a NetHack installation
 
   ./validated.dhall
-⫽ { rlecomp =
-      Some False
+⫽ { rlecomp = Some False
   , SOUND =
       [ { regex = "This door is locked", filename = "lock.wav", volume = 100 } ]
-  , SOUNDDIR =
-      Some "C:\\foo"
-  , zerocomp =
-      Some False
+  , SOUNDDIR = Some "C:\\foo"
+  , zerocomp = Some False
   }

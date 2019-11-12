@@ -5,10 +5,10 @@ in    λ(x : types.MenuColor)
       
       let suffix =
             Optional/fold
-            types.Color
-            x.color
-            Text
-            (λ(c : types.Color) → "${./Color.dhall c}&${attributes}")
-            attributes
+              types.Color
+              x.color
+              Text
+              (λ(c : types.Color) → "${./Color.dhall c}&${attributes}")
+              attributes
       
       in  "MENUCOLOR=\"${x.regex}\"=${suffix}"

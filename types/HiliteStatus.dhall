@@ -56,52 +56,28 @@ let Percent = ./Percent.dhall
 
 let Condition = ./Condition.dhall
 
-in  { title :
-        List (Hilite Textual)
-    , strength :
-        List (Hilite Numeric)
-    , dexterity :
-        List (Hilite Numeric)
-    , constitution :
-        List (Hilite Numeric)
-    , intelligence :
-        List (Hilite Numeric)
-    , wisdom :
-        List (Hilite Numeric)
-    , charisma :
-        List (Hilite Numeric)
-    , characteristics :
-        List (Hilite Numeric)
-    , alignment :
-        List (Hilite Textual)
-    , score :
-        List (Hilite Numeric)
-    , carrying-capacity :
-        List (Hilite Textual)
-    , gold :
-        List (Hilite Numeric)
-    , power :
-        List (Hilite Percent)
-    , power-max :
-        List (Hilite Numeric)
-    , experience-level :
-        List (Hilite Numeric)
-    , armor-class :
-        List (Hilite Numeric)
-    , HD :
-        List (Hilite Numeric)
-    , time :
-        List (Hilite Numeric)
-    , hunger :
-        List (Hilite Textual)
-    , hitpoints :
-        List (Hilite Percent)
-    , hitpoints-max :
-        List (Hilite Numeric)
-    , dungeon-level :
-        List (Hilite Numeric)
-    , experience :
-        List (Hilite Numeric)
-    , condition :
-        List (Hilite Condition)
+in  { title : List (Hilite Textual)
+    , strength : List (Hilite Numeric)
+    , dexterity : List (Hilite Numeric)
+    , constitution : List (Hilite Numeric)
+    , intelligence : List (Hilite Numeric)
+    , wisdom : List (Hilite Numeric)
+    , charisma : List (Hilite Numeric)
+    , characteristics : List (Hilite Numeric)
+    , alignment : List (Hilite Textual)
+    , score : List (Hilite Numeric)
+    , carrying-capacity : List (Hilite Textual)
+    , gold : List (Hilite Numeric)
+    , power : List (Hilite Percent)
+    , power-max : List (Hilite Numeric)
+    , experience-level : List (Hilite Numeric)
+    , armor-class : List (Hilite Numeric)
+    , HD : List (Hilite Numeric)
+    , time : List (Hilite Numeric)
+    , hunger : List (Hilite Textual)
+    , hitpoints : List (Hilite Percent)
+    , hitpoints-max : List (Hilite Numeric)
+    , dungeon-level : List (Hilite Numeric)
+    , experience : List (Hilite Numeric)
+    , condition : List (Hilite Condition)
     }

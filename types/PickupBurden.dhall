@@ -1,7 +1,1 @@
-< unencumbered
-| burdened
-| stressed
-| strained
-| overtaxed
-| overloaded
->
+< unencumbered | burdened | stressed | strained | overtaxed | overloaded >

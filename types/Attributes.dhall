@@ -3,14 +3,9 @@
     each attribute can be specified at most one time.
 -}
 
-{ bold :
-    Optional Bool
-, inverse :
-    Optional Bool
-, underline :
-    Optional Bool
-, blink :
-    Optional Bool
-, dim :
-    Optional Bool
+{ bold : Optional Bool
+, inverse : Optional Bool
+, underline : Optional Bool
+, blink : Optional Bool
+, dim : Optional Bool
 }

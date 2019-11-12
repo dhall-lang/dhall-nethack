@@ -7,12 +7,15 @@ in    λ(x : types.HiliteStatus)
               λ(a : Type)
             → λ(renderTrigger : a → Text)
             → λ(field : Text)
-            → Prelude.`Text`.concatMap
-              (types.Hilite a)
-              (   λ(h : types.Hilite a)
-                → ./Options.dhall
-                  "hilite_status:${field}${./Hilite.dhall a renderTrigger h}"
-              )
+            → Prelude.Text.concatMap
+                (types.Hilite a)
+                (   λ(h : types.Hilite a)
+                  → ./Options.dhall
+                      "hilite_status:${field}${./Hilite.dhall
+                                                 a
+                                                 renderTrigger
+                                                 h}"
+                )
       
       let renderTextualHilites = renderHilites types.Textual ./Textual.dhall
       

@@ -4,8 +4,6 @@ in  < always
     | up
     | down
     | changed
-    | percentage :
-        Comparison
-    | number :
-        Comparison
+    | percentage : Comparison
+    | number : Comparison
     >

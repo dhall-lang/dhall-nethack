@@ -42,16 +42,10 @@
     all of the fields or omitting the record entirely.
 -}
 
-{ Attributes =
-    ./defaults/Attributes.dhall
-, Config =
-    ./defaults/Config.dhall
-, Disclose =
-    ./defaults/Disclose.dhall
-, HiliteStatus =
-    ./defaults/HiliteStatus.dhall
-, ParanoidConfirmation =
-    ./defaults/ParanoidConfirmation.dhall
-, Scores =
-    ./defaults/Scores.dhall
+{ Attributes = ./defaults/Attributes.dhall
+, Config = ./defaults/Config.dhall
+, Disclose = ./defaults/Disclose.dhall
+, HiliteStatus = ./defaults/HiliteStatus.dhall
+, ParanoidConfirmation = ./defaults/ParanoidConfirmation.dhall
+, Scores = ./defaults/Scores.dhall
 }

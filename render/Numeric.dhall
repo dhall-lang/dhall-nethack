@@ -4,15 +4,10 @@ let renderComparison = ./Comparison.dhall
 
 in    λ(x : types.Numeric)
     → merge
-      { always =
-          "always"
-      , up =
-          "up"
-      , down =
-          "down"
-      , changed =
-          "changed"
-      , number =
-          renderComparison
-      }
-      x
+        { always = "always"
+        , up = "up"
+        , down = "down"
+        , changed = "changed"
+        , number = renderComparison
+        }
+        x

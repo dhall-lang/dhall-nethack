@@ -22,4 +22,7 @@
     ```
 -}
 
-< EqualTo : Natural | LessThanOrEqualTo : Natural | GreaterThanOrEqualTo : Natural >
+< EqualTo : Natural
+| LessThanOrEqualTo : Natural
+| GreaterThanOrEqualTo : Natural
+>

@@ -49,7 +49,7 @@ let renderOptionalNatural = renderNamedOptional Natural Natural/show
 let renderList =
         λ(a : Type)
       → λ(f : a → Text)
-      → Prelude.`Text`.concatMap a (λ(x : a) → "${f x}\n")
+      → Prelude.Text.concatMap a (λ(x : a) → "${f x}\n")
 
 let renderOptionalEnabled =
         λ(a : Type)
@@ -74,7 +74,7 @@ let renderDisclose =
 
 let renderMenuColors =
         λ(x : List types.MenuColor)
-      →       if Prelude.`List`.null types.MenuColor x
+      →       if Prelude.List.null types.MenuColor x
         
         then  ""
         
@@ -84,9 +84,9 @@ let renderMenuColors =
 
 let renderMenuHeadings =
       renderNamedOptional
-      types.MenuHeadings
-      ./MenuHeadings.dhall
-      "menu_headings"
+        types.MenuHeadings
+        ./MenuHeadings.dhall
+        "menu_headings"
 
 let renderMenuStyle =
       renderNamedOptional types.MenuStyle ./MenuStyle.dhall "menustyle"
@@ -101,9 +101,9 @@ let renderPetType = renderNamedOptional types.PetType ./PetType.dhall "pettype"
 
 let renderPickupBurden =
       renderNamedOptional
-      types.PickupBurden
-      ./PickupBurden.dhall
-      "pickup_burden"
+        types.PickupBurden
+        ./PickupBurden.dhall
+        "pickup_burden"
 
 let renderPileLimit =
       renderNamedOptional types.PileLimit ./PileLimit.dhall "pile_limit"
@@ -125,9 +125,9 @@ let renderWhatisCoord =
 
 let renderWhatisFilter =
       renderNamedOptional
-      types.WhatisFilter
-      ./WhatisFilter.dhall
-      "whatis_filter"
+        types.WhatisFilter
+        ./WhatisFilter.dhall
+        "whatis_filter"
 
 in    λ(config : types.Config)
     →     renderAUTOCOMPLETES config.AUTOCOMPLETE

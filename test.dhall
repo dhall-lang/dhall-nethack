@@ -8,10 +8,8 @@ in    defaults.Config
           ⫽ { title =
                 [ { trigger =
                       Some (types.Numeric.number (types.Comparison.EqualTo 5))
-                  , color =
-                      types.Color.blue
-                  , attributes =
-                      None types.Attributes
+                  , color = types.Color.blue
+                  , attributes = None types.Attributes
                   }
                 ]
             }

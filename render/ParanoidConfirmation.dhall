@@ -6,11 +6,11 @@ let renderConfirmation =
         λ(name : Text)
       → λ(o : Optional Bool)
       → Optional/fold
-        Bool
-        o
-        (List Text)
-        (λ(b : Bool) → if b then [ name ] else [] : List Text)
-        ([] : List Text)
+          Bool
+          o
+          (List Text)
+          (λ(b : Bool) → if b then [ name ] else [] : List Text)
+          ([] : List Text)
 
 in    λ(x : types.ParanoidConfirmation)
     → let confirmations =
@@ -25,12 +25,12 @@ in    λ(x : types.ParanoidConfirmation)
             # renderConfirmation "Remove" x.Remove
             # renderConfirmation "all" x.all
       
-      in        if Prelude.`List`.null Text confirmations
+      in        if Prelude.List.null Text confirmations
           
           then  ""
           
           else  ''
-                OPTIONS=paranoid_confirmation:${Prelude.`Text`.concatSep
-                                                " "
-                                                confirmations}
+                OPTIONS=paranoid_confirmation:${Prelude.Text.concatSep
+                                                  " "
+                                                  confirmations}
                 ''

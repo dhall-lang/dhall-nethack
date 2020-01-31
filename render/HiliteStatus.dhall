@@ -16,16 +16,16 @@ in    λ(x : types.HiliteStatus.Type)
                                                  renderTrigger
                                                  h}"
                 )
-      
+
       let renderTextualHilites = renderHilites types.Textual ./Textual.dhall
-      
+
       let renderNumericHilites = renderHilites types.Numeric ./Numeric.dhall
-      
+
       let renderPercentHilites = renderHilites types.Percent ./Percent.dhall
-      
+
       let renderConditionHilites =
             renderHilites types.Condition ./Condition.dhall
-      
+
       in      renderTextualHilites "title" x.title
           ++  renderNumericHilites "strength" x.strength
           ++  renderNumericHilites "dexterity" x.dexterity

@@ -49,7 +49,13 @@ let renderOptionalNatural = renderNamedOptional Natural Natural/show
 let renderList =
         λ(a : Type)
       → λ(f : a → Text)
-      → Prelude.Text.concatMap a (λ(x : a) → "${f x}\n")
+      → Prelude.Text.concatMap
+          a
+          (   λ(x : a)
+            → ''
+              ${f x}
+              ''
+          )
 
 let renderOptionalEnabled =
         λ(a : Type)
@@ -84,9 +90,9 @@ let renderDisclose =
 let renderMenuColors =
         λ(x : List types.MenuColor)
       →       if Prelude.List.null types.MenuColor x
-        
+
         then  ""
-        
+
         else  ''
               OPTIONS=menucolors
               ${renderList types.MenuColor ./MenuColor.dhall x}''

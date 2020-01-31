@@ -7,22 +7,20 @@ let types = ../types.dhall
 
 in  types.Config::{
     , AUTOCOMPLETE =
-        [ { enable = True, value = "zap" }
-        , { enable = False, value = "annotate" }
-        ]
+      [ { enable = True, value = "zap" }
+      , { enable = False, value = "annotate" }
+      ]
     , acoustics = Some True
     , align = Some { enable = True, value = types.Alignment.chaotic }
     , autodescribe = Some False
     , autodig = Some False
     , AUTOPICKUP_EXCEPTION =
-        [ { pickup = False, name = "chest" }
-        , { pickup = True, name = "dagger" }
-        ]
+      [ { pickup = False, name = "chest" }, { pickup = True, name = "dagger" } ]
     , BIND =
-        [ { keybinding = "!", command = "loot" }
-        , { keybinding = "^v", command = "untrap" }
-        , { keybinding = "M-x", command = "terrain" }
-        ]
+      [ { keybinding = "!", command = "loot" }
+      , { keybinding = "^v", command = "untrap" }
+      , { keybinding = "M-x", command = "terrain" }
+      ]
     , catname = Some "Mirri"
     , checkpoint = Some True
     , checkspace = Some True
@@ -30,16 +28,14 @@ in  types.Config::{
     , cmdassist = Some True
     , confirm = Some True
     , dark_room = Some False
-    , disclose =
-        Some
-          types.Disclose::{
-          , inventory = Some { prompt = True, default = True }
-          , attributes = Some { prompt = True, default = False }
-          , monsters_killed = Some { prompt = False, default = True }
-          , monsters_genocided = Some { prompt = False, default = False }
-          , conduct = Some { prompt = False, default = False }
-          , dungeon_overview = Some { prompt = False, default = False }
-          }
+    , disclose = Some types.Disclose::{
+      , inventory = Some { prompt = True, default = True }
+      , attributes = Some { prompt = True, default = False }
+      , monsters_killed = Some { prompt = False, default = True }
+      , monsters_genocided = Some { prompt = False, default = False }
+      , conduct = Some { prompt = False, default = False }
+      , dungeon_overview = Some { prompt = False, default = False }
+      }
     , dogname = Some "Cujo"
     , extmenu = Some False
     , fixinv = Some True
@@ -50,15 +46,14 @@ in  types.Config::{
     , help = Some True
     , hilite_pet = Some False
     , hilite_pile = Some False
-    , hilite_status =
-        types.HiliteStatus::{
-        , gold =
-            [ { color = types.Color.yellow
-              , trigger = Some types.Numeric.always
-              , attributes = None types.Attributes.Type
-              }
-            ]
-        }
+    , hilite_status = types.HiliteStatus::{
+      , gold =
+        [ { color = types.Color.yellow
+          , trigger = Some types.Numeric.always
+          , attributes = None types.Attributes.Type
+          }
+        ]
+      }
     , hitpointbar = Some True
     , horsename = Some "Erhir"
     , ignintr = Some False
@@ -69,11 +64,11 @@ in  types.Config::{
     , mail = Some True
     , mention_walls = Some False
     , menucolors =
-        [ { regex = "blessed"
-          , color = Some types.Color.cyan
-          , attributes = types.Attributes::{ bold = Some True }
-          }
-        ]
+      [ { regex = "blessed"
+        , color = Some types.Color.cyan
+        , attributes = types.Attributes::{ bold = Some True }
+        }
+      ]
     , menustyle = Some types.MenuStyle.traditional
     , menu_deselect_all = Some "-"
     , menu_deselect_page = Some "\\"

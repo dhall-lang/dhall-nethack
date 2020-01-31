@@ -12,7 +12,7 @@ in  types.Config::{
     , autopickup = Some False
     , disclose =
         let secret = Some { default = False, prompt = False }
-        
+
         in  Some
               { attributes = secret
               , conduct = secret

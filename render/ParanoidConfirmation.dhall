@@ -24,11 +24,11 @@ in    λ(x : types.ParanoidConfirmation.Type)
             # renderConfirmation "Were-change" x.Were-change
             # renderConfirmation "Remove" x.Remove
             # renderConfirmation "all" x.all
-      
+
       in        if Prelude.List.null Text confirmations
-          
+
           then  ""
-          
+
           else  ''
                 OPTIONS=paranoid_confirmation:${Prelude.Text.concatSep
                                                   " "

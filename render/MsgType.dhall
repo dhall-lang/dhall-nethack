@@ -9,5 +9,5 @@ in    λ(x : types.MsgType)
               , show = λ(t : Text) → "show \"${t}\""
               }
               x
-      
+
       in  "MSGTYPE=${value}"

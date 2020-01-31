@@ -10,7 +10,7 @@ in    λ(a : Type)
               Text
               (λ(trigger : a) → "/${renderTrigger trigger}")
               ""
-      
+
       let attributes =
             Optional/fold
               types.Attributes.Type
@@ -18,7 +18,7 @@ in    λ(a : Type)
               Text
               (λ(a : types.Attributes.Type) → "&${./Attributes.dhall a}")
               ""
-      
+
       let color = "/${./Color.dhall hilite.color}"
-      
+
       in  "${trigger}${color}${attributes}"

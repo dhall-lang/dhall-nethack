@@ -5,7 +5,7 @@
   ./validated.dhall
 ⫽ { rlecomp = Some False
   , SOUND =
-      [ { regex = "This door is locked", filename = "lock.wav", volume = 100 } ]
+    [ { regex = "This door is locked", filename = "lock.wav", volume = 100 } ]
   , SOUNDDIR = Some "C:\\foo"
   , zerocomp = Some False
   }

@@ -4,7 +4,7 @@ let types = ../types.dhall
 
 in    λ(x : types.Scores.Type)
     → let own =
-            Optional/fold
+            Prelude.Optional.fold
               Bool
               x.own
               (List Text)
@@ -12,7 +12,7 @@ in    λ(x : types.Scores.Type)
               ([] : List Text)
 
       let around =
-            Optional/fold
+            Prelude.Optional.fold
               Natural
               x.around
               (List Text)
@@ -20,7 +20,7 @@ in    λ(x : types.Scores.Type)
               ([] : List Text)
 
       let top =
-            Optional/fold
+            Prelude.Optional.fold
               Natural
               x.top
               (List Text)

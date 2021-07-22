@@ -1,10 +1,11 @@
 let types = ../types.dhall
+let Prelude = ../Prelude.dhall
 
 in    λ(x : types.MenuColor)
     → let attributes = ./Attributes.dhall x.attributes
 
       let suffix =
-            Optional/fold
+            Prelude.Optional.fold
               types.Color
               x.color
               Text

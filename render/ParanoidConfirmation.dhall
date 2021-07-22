@@ -5,7 +5,7 @@ let types = ../types.dhall
 let renderConfirmation =
         λ(name : Text)
       → λ(o : Optional Bool)
-      → Optional/fold
+      → Prelude.Optional.fold
           Bool
           o
           (List Text)

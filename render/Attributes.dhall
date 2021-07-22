@@ -5,7 +5,7 @@ let types = ../types.dhall
 let renderAttribute =
         λ(name : Text)
       → λ(x : Optional Bool)
-      → Optional/fold
+      → Prelude.Optional.fold
           Bool
           x
           (List Text)

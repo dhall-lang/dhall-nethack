@@ -1,10 +1,11 @@
 let types = ../types.dhall
+let Prelude = ../Prelude.dhall
 
 in    λ(a : Type)
     → λ(renderTrigger : a → Text)
     → λ(hilite : types.Hilite a)
     → let trigger =
-            Optional/fold
+            Prelude.Optional.fold
               a
               hilite.trigger
               Text
@@ -12,7 +13,7 @@ in    λ(a : Type)
               ""
 
       let attributes =
-            Optional/fold
+            Prelude.Optional.fold
               types.Attributes.Type
               hilite.attributes
               Text

@@ -28,7 +28,7 @@ let renderOptional =
         λ(a : Type)
       → λ(f : a → Text)
       → λ(optional : Optional a)
-      → Optional/fold a optional Text (λ(x : a) → renderOptions (f x)) ""
+      → Prelude.Optional.fold a optional Text (λ(x : a) → renderOptions (f x)) ""
 
 let renderNamedOptional =
         λ(a : Type)
@@ -65,7 +65,7 @@ let renderOptionalEnabled =
 let renderOptionalTopLevel =
         λ(name : Text)
       → λ(x : Optional Text)
-      → Optional/fold
+      → Prelude.Optional.fold
           Text
           x
           Text

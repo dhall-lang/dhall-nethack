@@ -7,7 +7,7 @@ let renderDisclosure = ./Disclosure.dhall
 let renderOptionalDisclosure =
         λ(suffix : Text)
       → λ(x : Optional types.Disclosure)
-      → Optional/fold
+      → Prelude.Optional.fold
           types.Disclosure
           x
           (List Text)
